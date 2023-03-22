@@ -190,3 +190,9 @@ list.c:51:7: error: ‘List’ {aka ‘struct List’} has no member named ‘ne
       |       ^~
 Compilation failed
 a18a5fa
+Wed 22 Mar 2023 10:17:36 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 15/70
+984b41b
