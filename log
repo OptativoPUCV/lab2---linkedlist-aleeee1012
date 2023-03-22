@@ -150,3 +150,23 @@ list.c:53:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 2ec6f7e
+Wed 22 Mar 2023 10:16:02 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:51:23: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   51 |   list->current = list->next
+      |                       ^~
+list.c:51:29: error: expected ‘;’ before ‘return’
+   51 |   list->current = list->next
+      |                             ^
+      |                             ;
+   52 |   return list->current->data;
+      |   ~~~~~~                     
+list.c:53:1: error: control reaches end of non-void function [-Werror=return-type]
+   53 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+53be178
