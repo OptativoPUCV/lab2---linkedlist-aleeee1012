@@ -48,8 +48,8 @@ void * firstList(List * list)
 
 void * nextList(List * list)
 {
-  
-  return list->current->next->data;
+  list->current = list->netx
+  return list->current->data;
 }
 
 void * lastList(List * list)
