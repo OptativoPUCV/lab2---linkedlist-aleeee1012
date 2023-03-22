@@ -24,3 +24,19 @@ list.c:38:7: error: request for member ‘current’ in something not a structur
       |       ^~
 Compilation failed
 4f91b75
+Wed 22 Mar 2023 09:41:39 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createNode’:
+list.c:31:10: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   31 |   return list;
+      |          ^~~~
+      |          List
+list.c:31:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:32:1: error: control reaches end of non-void function [-Werror=return-type]
+   32 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a581132
