@@ -52,3 +52,19 @@ Wed 22 Mar 2023 09:45:25 PM UTC:
  tests:  1|5
 total_score: 10/70
 d645fce
+Wed 22 Mar 2023 09:49:07 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:44:3: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   44 |   lista->current = lista->head;
+      |   ^~~~~
+      |   list
+list.c:44:3: note: each undeclared identifier is reported only once for each function it appears in
+list.c:46:1: error: control reaches end of non-void function [-Werror=return-type]
+   46 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e9df850
