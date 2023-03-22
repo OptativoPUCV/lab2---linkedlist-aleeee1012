@@ -4,3 +4,23 @@ Wed 22 Mar 2023 09:15:52 PM UTC:
  tests:  0|6
 total_score: 0/70
 9949fb1
+Wed 22 Mar 2023 09:41:05 PM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:3: error: unknown type name ‘list’; did you mean ‘List’?
+   36 |   list* list = (list*) malloc(sizeof(list));
+      |   ^~~~
+      |   List
+list.c:36:22: error: expected expression before ‘)’ token
+   36 |   list* list = (list*) malloc(sizeof(list));
+      |                      ^
+list.c:37:7: error: request for member ‘head’ in something not a structure or union
+   37 |   list->head = NULL;
+      |       ^~
+list.c:38:7: error: request for member ‘current’ in something not a structure or union
+   38 |   list->current = NULL;
+      |       ^~
+Compilation failed
+4f91b75
