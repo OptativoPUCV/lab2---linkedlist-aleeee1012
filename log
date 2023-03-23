@@ -330,3 +330,13 @@ Thu 23 Mar 2023 03:44:46 PM UTC:
  tests:  5|4
 total_score: 25/70
 696176e
+Thu 23 Mar 2023 03:45:24 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:62:23: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   62 |   list->current = list->prev;
+      |                       ^~
+Compilation failed
+9f60492
