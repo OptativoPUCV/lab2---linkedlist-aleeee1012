@@ -340,3 +340,9 @@ list.c:62:23: error: ‘List’ {aka ‘struct List’} has no member named ‘p
       |                       ^~
 Compilation failed
 9f60492
+Thu 23 Mar 2023 03:47:46 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 25/70
+c6715e6
