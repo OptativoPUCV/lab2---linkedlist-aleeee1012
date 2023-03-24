@@ -403,3 +403,9 @@ list.c:76:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 b2e834e
+Fri 24 Mar 2023 08:17:41 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+172c97e
