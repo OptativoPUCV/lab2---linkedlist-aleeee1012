@@ -97,8 +97,20 @@ void pushBack(List * list, void * data)
 }
 
 void pushCurrent(List * list, void * data)
-{
-  list->current->next = data;
+{ 
+  if (list->head == NULL && list->tail == NULL)
+  {
+    list->tail = data;
+    list->head = data;
+  }
+  else
+  {
+    list->current->next = data;
+    data->prev = list->current;
+    list->current = data;
+  }
+  list->size++;
+  //list->current->next = data;
 }
 
 void * popFront(List * list)
