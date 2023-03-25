@@ -98,16 +98,7 @@ void pushBack(List * list, void * data)
 
 void pushCurrent(List * list, void * data)
 {
-  node *aux = list->head;
-  while(aux->next != current)
-  {
-    aux = aux->next;
-    aux->next = list->current->next;
-    free(list->current);
-    list->current = list->head;
-    
-  }
-  
+  list->current->next = list->current->data;
 }
 
 void * popFront(List * list)
@@ -124,6 +115,15 @@ void * popBack(List * list)
 
 void * popCurrent(List * list)
 {
+  node *aux = list->head;
+  while(aux->next != current)
+  {
+    aux = aux->next;
+    aux->next = list->current->next;
+    free(list->current);
+    list->current = list->head;
+    
+  }
   return NULL;
 }
 
