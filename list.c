@@ -114,7 +114,7 @@ void pushCurrent(List * list, void * data)
     list->current = dato;
   }
   list->current++;
-  //list->current->next = data;
+  list->current->next = dato;
 }
 
 void * popFront(List * list)
