@@ -98,7 +98,7 @@ void pushBack(List * list, void * data)
 
 void pushCurrent(List * list, void * data)
 {
-  
+  if(!list->current->next) return NULL;
   list->current->next = data;
 }
 
@@ -141,7 +141,6 @@ void * popCurrent(List * list)
   {
     list->current->next->prev = list->current->prev;
   }
-
   free(list->current);
   list->current = aux;
   return dato;
