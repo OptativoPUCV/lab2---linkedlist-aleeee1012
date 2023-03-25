@@ -561,3 +561,15 @@ Sat 25 Mar 2023 06:47:42 PM UTC:
  tests:  10|2
 total_score: 45/70
 1af7a47
+Sat 25 Mar 2023 07:19:39 PM UTC: 
+ list.c | 19 +++++++++++--------
+ 1 file changed, 11 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:6: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  119 |   if(lista->current == NULL) return NULL;
+      |      ^~~~~
+      |      list
+list.c:119:6: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a65a1d4

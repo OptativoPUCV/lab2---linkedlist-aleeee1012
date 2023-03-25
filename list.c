@@ -33,7 +33,7 @@ Node * createNode(void * data)
 
 List * createList()
 {
-  List* lista = (List*) malloc(sizeof(List)); 
+  List *lista = (List*) malloc(sizeof(List)); 
   lista->head = NULL;
   lista->current = NULL;
   return lista;
@@ -98,7 +98,8 @@ void pushBack(List * list, void * data)
 
 void pushCurrent(List * list, void * data)
 {
-  list->current->next = list->current->data;
+  
+  list->current->next = data;
 }
 
 void * popFront(List * list)
@@ -115,15 +116,17 @@ void * popBack(List * list)
 
 void * popCurrent(List * list)
 {
-  /*node *aux = list->head;
-  while(aux->next != current)
+  if(lista->current == NULL) return NULL;
+  void *dato = list->current->data;
+  if(list->current == list->head)
   {
-    aux = aux->next;
+    list->head = list->head->next;
+    if(list->head->prev != NULL)
+    {
+      list->head->prev = NULL;
+    }
   }
-  aux->next = list->current->next;
-  free(list->current);
-  list->current = list->head;*/
-  return list->current->data;
+  return dato;
 }
 
 void cleanList(List * list)
