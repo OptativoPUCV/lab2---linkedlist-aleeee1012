@@ -579,3 +579,21 @@ Sat 25 Mar 2023 07:19:48 PM UTC:
  tests:  10|2
 total_score: 45/70
 71be4f2
+Sat 25 Mar 2023 07:21:50 PM UTC: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:121:3: error: unknown type name ‘node’; did you mean ‘Node’?
+  121 |   node *aux = list->current->next;
+      |   ^~~~
+      |   Node
+list.c:121:15: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+  121 |   node *aux = list->current->next;
+      |               ^~~~
+list.c:133:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+  133 |   list->current = aux;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+a7a15ab
