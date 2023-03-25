@@ -544,3 +544,14 @@ list.c:123:6: error: request for member ‘next’ in something not a structure 
 cc1: all warnings being treated as errors
 Compilation failed
 e718bfc
+Sat 25 Mar 2023 06:47:31 PM UTC: 
+ list.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+  127 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4898620
