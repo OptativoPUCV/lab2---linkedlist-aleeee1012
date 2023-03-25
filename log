@@ -773,3 +773,9 @@ list.c:110:3: error: ‘else’ without a previous ‘if’
       |   ^~~~
 Compilation failed
 475427c
+Sat 25 Mar 2023 08:11:23 PM UTC: 
+ list.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+ tests:  12|0
+total_score: 70/70
+5cb99ad
