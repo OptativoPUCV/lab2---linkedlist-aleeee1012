@@ -515,3 +515,32 @@ Sat 25 Mar 2023 06:39:44 PM UTC:
  tests:  10|2
 total_score: 45/70
 29fd5f9
+Sat 25 Mar 2023 06:47:19 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:118:3: error: unknown type name ‘node’; did you mean ‘Node’?
+  118 |   node *aux = list->head;
+      |   ^~~~
+      |   Node
+list.c:118:15: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+  118 |   node *aux = list->head;
+      |               ^~~~
+list.c:119:12: error: request for member ‘next’ in something not a structure or union
+  119 |   while(aux->next != current)
+      |            ^~
+list.c:119:22: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  119 |   while(aux->next != current)
+      |                      ^~~~~~~
+      |                      popCurrent
+list.c:119:22: note: each undeclared identifier is reported only once for each function it appears in
+list.c:121:14: error: request for member ‘next’ in something not a structure or union
+  121 |     aux = aux->next;
+      |              ^~
+list.c:123:6: error: request for member ‘next’ in something not a structure or union
+  123 |   aux->next = list->current->next;
+      |      ^~
+cc1: all warnings being treated as errors
+Compilation failed
+e718bfc
