@@ -692,3 +692,16 @@ Sat 25 Mar 2023 08:01:41 PM UTC:
  tests:  11|1
 total_score: 60/70
 5db19dd
+Sat 25 Mar 2023 08:02:58 PM UTC: 
+ list.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:102:3: error: expected ‘,’ or ‘;’ before ‘if’
+  102 |   if (list->head == NULL && list->tail == NULL)
+      |   ^~
+list.c:107:3: error: ‘else’ without a previous ‘if’
+  107 |   else
+      |   ^~~~
+Compilation failed
+f11429a
